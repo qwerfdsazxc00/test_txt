@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>cn.com.dhcc</groupId>
+		<artifactId>ent-creditWeb</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>common-fileStorage</artifactId>
+	<packaging>jar</packaging>
+
+	<properties>
+		<spring.version>4.0.7.RELEASE</spring.version>
+		<project.build.jdk>1.8</project.build.jdk>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<common.creditQuery.version>0.0.1-SNAPSHOT</common.creditQuery.version>
+		<common.queryComponent.version>0.0.1-SNAPSHOT</common.queryComponent.version>
+		<snappy.version>1.1.2.6</snappy.version>
+	</properties>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.5.1</version>
+				<configuration>
+					<encoding>${project.build.sourceEncoding}</encoding>
+					<source>${project.build.jdk}</source>
+					<target>${project.build.jdk}</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>3.0.2</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.0.1</version>
+				<configuration>
+					<encoding>utf-8</encoding>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+	<dependency>
+			<groupId>cn.com.dhcc</groupId>
+			<artifactId>creditCommon</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+    		<groupId>org.lz4</groupId>
+    		<artifactId>lz4-java</artifactId>
+   			 <version>1.4.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-java-sdk-s3</artifactId>
+			<version>1.11.327</version>
+		</dependency>
+	</dependencies>
+</project>
